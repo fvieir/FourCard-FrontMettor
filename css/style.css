@@ -1,5 +1,17 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
+    background-color: var(--very-light-gray);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 
 .nav {
@@ -12,6 +24,68 @@ body {
     margin: 40px auto;
 }
 
-.nav .main-title{
-    font-weight: 100;
+.nav h1:first-child{
+    font-weight: 400;
+}
+
+main {
+    margin: 30px 0 0 20px;
+}
+
+.cards {
+    position: relative;
+    box-sizing: border-box;
+    width: 940px;
+    margin: 10px auto;
+    height: 500px;
+}
+
+.cards div {
+    display: inline-block;
+    text-align: start;
+    padding: 20px 20px 0;
+    width: 200px;
+    height: 200px;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #CCC;
+    position:absolute;
+}
+
+.cards .supervision {
+    top: 145px;
+    left: 50px;
+    border-top: 5px solid var(--cyan);
+}
+
+.cards .team-builder {
+    top: 0;
+    right: 376px;
+    border-top: 5px solid var(--red);
+}
+
+.cards .karma {
+    bottom: 0px;
+    left: 324px;
+    border-top: 5px solid var(--orange);
+}
+
+.cards .calculator{
+    right: 100px;
+    top: 145px;
+    border-top: 5px solid var(--blue);
+}
+
+.cards p {
+    font-size: 12px;
+    margin-top: -15px;
+}
+
+.cards img {
+    width:40px;
+    height:40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
 }
