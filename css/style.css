@@ -14,6 +14,10 @@ body {
     font-weight: 200;
 }
 
+p {
+    font-weight: 100;
+}
+
 .nav {
     width: 100%;
 }
@@ -21,15 +25,15 @@ body {
 .nav .box-nav {
     width: 50%;
     text-align: center;
-    margin: 40px auto;
+    margin: 0 auto;
 }
 
 .nav h1:first-child{
-    font-weight: 400;
+    font-weight: 200;
 }
 
 main {
-    margin: 30px 0 0 20px;
+    margin: -20px 0 0 20px;
 }
 
 .cards {
@@ -41,37 +45,41 @@ main {
 }
 
 .cards div {
+    position:absolute;
     display: inline-block;
     text-align: start;
-    padding: 20px 20px 0;
+    padding: 0 40px;
     width: 200px;
     height: 200px;
     background: #FFF;
     border-radius: 10px;
     box-shadow: 5px 5px 15px #CCC;
-    position:absolute;
+}
+
+.cards div:hover {
+    box-shadow: 8px 8px 15px #CCC;
 }
 
 .cards .supervision {
     top: 145px;
-    left: 50px;
+    left: 18px;
     border-top: 5px solid var(--cyan);
 }
 
 .cards .team-builder {
-    top: 0;
-    right: 376px;
+    top: 40px;
+    right: 337px;
     border-top: 5px solid var(--red);
 }
 
 .cards .karma {
-    bottom: 0px;
+    bottom: 30px;
     left: 324px;
     border-top: 5px solid var(--orange);
 }
 
 .cards .calculator{
-    right: 100px;
+    right: 30px;
     top: 145px;
     border-top: 5px solid var(--blue);
 }
@@ -82,10 +90,40 @@ main {
 }
 
 .cards img {
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
     position: absolute;
     bottom: 0;
     right: 0;
     padding: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .nav .box-nav {
+        width: 90%;
+    }
+
+    .box-nav h1 {
+        font-size: 24px;
+    }
+
+    main {
+        margin: 0 0;
+    }
+
+    .cards {
+        width: auto;
+        margin: 50px auto;
+    }
+
+    .cards div {
+        position: static;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .cards img { 
+        position: relative;
+        left: 150px;
+    }
 }
